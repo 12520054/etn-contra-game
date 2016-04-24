@@ -2076,8 +2076,14 @@ void Rambo::Update()
 
 void Rambo::Render(SPRITEHANDLE spriteHandle)
 {
-
-	for (int i = 1; i < m_life; i++)
+	int numRender = m_life;
+	if (m_life > 5) {
+		numRender = 5;
+	}
+	else {
+		numRender = m_life;
+	}
+	for (int i = 1; i < numRender; i++)
 	{
 		SpriteManager::getInstance()->getSprite(eSpriteID::SPRITE_MEDAL)->RenderWithoutTransform(
 			spriteHandle,
@@ -2100,7 +2106,7 @@ void Rambo::Render(SPRITEHANDLE spriteHandle)
 	{
 		m_RamboSprite->Render(spriteHandle,
 			getPositionVec2(),
-			ESpriteEffect::None, 
+			ESpriteEffect::None,
 			0.0f,
 			1.0f,
 			1.0f,

@@ -191,7 +191,7 @@ bool CGame::Initialize(HINSTANCE hInstance, bool isWindowed)
 
 	SceneManagerDx9::getInstance()->setDirectDevice(m_lpDirect3DDevice);
 
-	SceneManagerDx9::getInstance()->AddElement(new PlayScene(eIDSceneGame::DEMO, 3));
+	SceneManagerDx9::getInstance()->AddElement(new MenuGame(eIDSceneGame::MENUGAME));
 	return true;
 }
 

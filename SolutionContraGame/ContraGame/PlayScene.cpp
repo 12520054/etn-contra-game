@@ -2,7 +2,7 @@
 #include "LoseState.h"
 #include "WinGameScene.h"
 
-int PlayScene::m_RamboLife = 1;
+int PlayScene::m_RamboLife = 30;
 int PlayScene::m_score = 0;
 eIDSkillBullet PlayScene::m_RamboBullet = eIDSkillBullet::S_SKILL_BULLET;
 
